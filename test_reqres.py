@@ -17,6 +17,7 @@ def test_post_create_user():
 def test_delete_users():
     response = requests.delete("https://reqres.in/api/users/2")
     assert response.status_code == 204
+    assert response.text == ""
 
 
 def test_put_update_user():
